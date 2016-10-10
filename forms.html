@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Ubermelon Order Form</title>
+</head>
+<body>
+    <h1>Order!</h1>
+<table>
+    <tr>
+        <th>Prices</th>
+    </tr>
+    <tr>
+        <td>Melon Name</td>
+        <td> Price per lb</td>
+    </tr>
+    <tr>
+        <td>Watermelon</td>
+        <td>$1.59</td>
+    </tr>
+    <tr>
+        <td>Honeydew</td>
+        <td>$0.99</td>
+    </tr>
+    <tr>
+        <td>Canteloupe</td>
+        <td>$1.29</td>
+    </tr>
+    <tr>
+        <td>Crenshaw</td>
+        <td>$2.19</td>
+    </tr>
+    <tr>
+        <td>Canary</td>
+        <td>$11.99</td>
+    </tr>
+</table>
+
+<p>Place your orders here! You know you want to.</p>
+
+<form>
+    <label>First Name:</label> <input type="text" name="firstname" required><br>
+    <label>Last Name:</label> <input type="text" name="lastname" required><br>
+    <label>Birthdate:</label> <input type="date" name="bday" min="1900-12-31" max="1999-12-31"><br>
+  
+    <label>Melon Type:</label> 
+    <select name="melontype">
+        <option value="watermelon">Watermelon</option>
+        <option value="honeydew">Honeydew</option>
+        <option value="canteloupe">Canteloupe</option>
+        <option value="crenshaw">Crenshaw</option>
+        <option value="canary">Canary</option>
+    </select>
+    <br>
+
+    <label>Quantity*:</label>
+    <input type="number" name="quantity" min="1" max="500000000" required>
+    <br>
+
+    <label>Delivery Time:</label>
+    <input type="radio" name="time" value="am">12:00am-12:00pm
+    <input type="radio" name="time" value="pm">12:00pm-12:00am
+    <input type="radio" name="time" value="wat">Time is an illusion
+    <br>
+    <label>Returning Customer?</label> 
+        <input type="radio" name="yesno" value="yes">Yes
+        <input type="radio" name="yesno" value="no">No
+    <br>
+
+
+    <label>For Statistical Purposes:</label>  
+    <input type="checkbox" name="stats" value="dog">Dog
+    <input type="checkbox" name="stats" value="cat">Cat
+    <input type="checkbox" name="stats" value="hedgehog">Hedgehog
+    <input type="checkbox" name="stats" value="balloonicorn">Balloonicorn
+    <input type="checkbox" name="stats" value="yak">Yak
+
+    <br>
+    <p>Tell us about your hopes and dreams</p>
+    <div>
+      <textarea name="about-me"> </textarea>
+    </div>
+</form>
+
+
+
+<form action="https://ubermelon-order-form.herokuapp.com/process" method="GET">
+    <input type="Submit">
+</form>
+<br>
+<footer>
+    <p>*Quantities given are by the flat.</p>
+</footer>
+</body>
+</html>
